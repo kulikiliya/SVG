@@ -88,6 +88,10 @@ p {
 
 .header {
   border-bottom: 1px solid var(--br-line-color);
+
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header > .flex-box {
@@ -162,7 +166,7 @@ p {
 
 /* hero */
 
-.overlay {
+.hero {
   margin: 0 auto;
   padding: 0;
   max-width: 1440px;
@@ -170,11 +174,8 @@ p {
     url(../images/hero/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
-
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
 
-.hero {
   text-align: center;
 }
 
@@ -241,8 +242,10 @@ p {
 /* svg для 2 части */
 .features-section .svg-box {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 0 8px 0;
-  padding: 24px 100px;
+
   height: 112px;
   border-radius: 4px;
 
@@ -349,6 +352,15 @@ p {
   background-color: var(--primary-brand);
 }
 
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--pressed-state);
+}
+
+.social-list-svg {
+  fill: var(--footer-cloud-text);
+}
+
 /* customer-section */
 
 .customer.section {
@@ -365,14 +377,28 @@ p {
 
 .customer .item {
   width: calc((100% - 120px) / 6);
-  border-radius: 4px;
-  border: 1px solid var(--lightslate);
+  height: 88px;
 }
 .customer-list-link {
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  padding: 16px 32px;
+  border: 1px solid var(--lightslate);
+  border-radius: 4px;
+
+  color: red;
+}
+
+.customer-list-link:hover,
+.customer-list-link:active {
+  border-color: var(--pressed-state);
+  color: var(--pressed-state);
+}
+
+.customer .social-list-svg {
+  fill: currentColor;
 }
 
 /* footer */
@@ -385,10 +411,11 @@ p {
 }
 .footer-section .container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
 }
 .footer-links .social-list {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 .footer-logo {
@@ -407,6 +434,7 @@ p {
 
 .footer-text {
   width: 264px;
+  margin-right: 120px;
 
   color: var(--footer-cloud-text);
 
@@ -481,6 +509,14 @@ p {
 .portfolio-list > .item {
   width: calc((100% - 48px) / 3);
 }
+
+.portfolio-list .link {
+  display: block;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-list .title {
   margin-bottom: 8px;
 
@@ -508,7 +544,4 @@ p {
 .portfolio-list .card-text:hover,
 .portfolio-list .card-text:active {
   border: 1px solid var(--footer-cloud-text);
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
